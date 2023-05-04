@@ -32,7 +32,7 @@ const rmDir = function (dirPath) {
   fs.rmdirSync(dirPath);
 };
 
-(async () => {
+const convert = () => {
   const postmanCollection = JSON.parse(
     fs
       .readFileSync("./postman/Lord of the Rings.postman_collection.json")
@@ -112,4 +112,8 @@ const rmDir = function (dirPath) {
       });
     });
   }
-})();
+};
+
+convert();
+
+exports.convert = convert;
